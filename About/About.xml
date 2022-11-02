@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Invincible Fortress</name>
+	<description>Invincible Fortress</description>
+	<packageId>derrek.tseng.InvincibleFortress</packageId>
+	<author>Derrek Tseng</author>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+</ModMetaData>

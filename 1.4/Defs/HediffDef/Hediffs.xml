@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>InvincibleFortress_InvincibleChip</defName>
+        <label>invincible chip</label>
+        <labelNoun>invincible chip</labelNoun>
+        <description>installed invincible chip</description>
+
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_InvincibleChip</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>InvincibleFortress_InvincibleChip</spawnThingOnRemoved>
+
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+
+        <disablesNeeds>
+            <li>Rest</li>
+            <li>Joy</li>
+            <li>Beauty</li>
+            <li>Comfort</li>
+            <li>Outdoors</li>
+            <li>Indoors</li>
+            <li>DrugDesire</li>
+            <li>RoomSize</li>
+            <li>Authority</li>
+            <li>Suppression</li>
+            <li>Deathrest</li>
+            <li>KillThirst</li>
+            <li>Learning</li>
+            <li>Play</li>
+            <li>MechEnergy</li>
+        </disablesNeeds>
+
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>2</offset>
+                    </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>2</setMax>
+                    </li>
+                </capMods>
+
+                <statOffsets>
+                    <MoveSpeed>200</MoveSpeed>
+                    <ComfyTemperatureMin>-1000</ComfyTemperatureMin>
+					<ComfyTemperatureMax>1000</ComfyTemperatureMax>
+                    <MeleeArmorPenetration>10</MeleeArmorPenetration>
+                    <MeleeHitChance>10</MeleeHitChance>
+                    <MeleeHitChanceOutdoorsDarkOffset>10</MeleeHitChanceOutdoorsDarkOffset>
+                    <MeleeHitChanceOutdoorsLitOffset>10</MeleeHitChanceOutdoorsLitOffset>
+                    <MeleeHitChanceIndoorsDarkOffset>10</MeleeHitChanceIndoorsDarkOffset>
+                    <MeleeHitChanceIndoorsLitOffset>10</MeleeHitChanceIndoorsLitOffset>
+                    <MeleeDodgeChance>100</MeleeDodgeChance>
+                    <MeleeDodgeChanceOutdoorsDarkOffset>10</MeleeDodgeChanceOutdoorsDarkOffset>
+                    <MeleeDodgeChanceOutdoorsLitOffset>10</MeleeDodgeChanceOutdoorsLitOffset>
+                    <MeleeDodgeChanceIndoorsDarkOffset>10</MeleeDodgeChanceIndoorsDarkOffset>
+                    <MeleeDodgeChanceIndoorsLitOffset>10</MeleeDodgeChanceIndoorsLitOffset>
+                    <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+                    <ShootingAccuracyFactor_Touch>5</ShootingAccuracyFactor_Touch>
+                    <ShootingAccuracyFactor_Short>5</ShootingAccuracyFactor_Short>
+                    <ShootingAccuracyFactor_Medium>5</ShootingAccuracyFactor_Medium>
+                    <ShootingAccuracyFactor_Long>5</ShootingAccuracyFactor_Long>
+                    <ShootingAccuracyOutdoorsDarkOffset>5</ShootingAccuracyOutdoorsDarkOffset>
+                    <ShootingAccuracyOutdoorsLitOffset>5</ShootingAccuracyOutdoorsLitOffset>
+                    <ShootingAccuracyIndoorsDarkOffset>5</ShootingAccuracyIndoorsDarkOffset>
+                    <ShootingAccuracyIndoorsLitOffset>5</ShootingAccuracyIndoorsLitOffset>
+                    <ToxicResistance>1</ToxicResistance>
+                    <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+                </statOffsets>
+
+                <statFactors>
+                    <MoveSpeed>5</MoveSpeed>
+                    <MeleeDamageFactor>20</MeleeDamageFactor>
+                    <MeleeDoorDamageFactor>20</MeleeDoorDamageFactor>
+                    <AimingDelayFactor>0</AimingDelayFactor>
+                    <RangedCooldownFactor>0</RangedCooldownFactor>
+                    <MortarMissRadiusFactor>0</MortarMissRadiusFactor>
+                    <LifespanFactor>500</LifespanFactor>
+                    <ButcheryFleshSpeed>5</ButcheryFleshSpeed>
+                    <ButcheryMechanoidSpeed>5</ButcheryMechanoidSpeed>
+                    <WorkSpeedGlobal>5</WorkSpeedGlobal>
+                    <MiningSpeed>5</MiningSpeed>
+                    <DeepDrillingSpeed>5</DeepDrillingSpeed>
+                    <SmoothingSpeed>5</SmoothingSpeed>
+                    <ResearchSpeed>5</ResearchSpeed>
+                    <AnimalGatherSpeed>5</AnimalGatherSpeed>
+                    <PlantWorkSpeed>5</PlantWorkSpeed>
+                    <PlantHarvestYield>5</PlantHarvestYield>
+                    <ConstructionSpeed>5</ConstructionSpeed>
+                    <CleaningSpeed>5</CleaningSpeed>
+                    <MedicalTendSpeed>5</MedicalTendSpeed>
+                    <MedicalOperationSpeed>5</MedicalOperationSpeed>
+                    <SmeltingSpeed>5</SmeltingSpeed>
+                    <GeneralLaborSpeed>5</GeneralLaborSpeed>
+                    <DrugSynthesisSpeed>5</DrugSynthesisSpeed>
+                    <CookSpeed>5</CookSpeed>
+                    <DrugCookingSpeed>5</DrugCookingSpeed>
+                    <HackingSpeed>5</HackingSpeed>
+                    <PruningSpeed>5</PruningSpeed>
+                    <GlobalLearningFactor>5.0</GlobalLearningFactor>
+                    <ImmunityGainSpeed>10</ImmunityGainSpeed>
+                    <MentalBreakThreshold>0</MentalBreakThreshold>
+                    <PsychicEntropyGain>0</PsychicEntropyGain>
+                    <IncomingDamageFactor>0</IncomingDamageFactor>
+                    <StaggerDurationFactor>0</StaggerDurationFactor>
+                    <PawnTrapSpringChance>0</PawnTrapSpringChance>
+                    <Flammability>0</Flammability>
+                    <CancerRate>0</CancerRate>
+                    <FilthRate>0</FilthRate>
+                </statFactors>
+
+                <socialFightChanceFactor>0</socialFightChanceFactor>
+                <hungerRateFactor>0</hungerRateFactor>
+            </li>
+        </stages>
+
+    </HediffDef>
+</Defs>
