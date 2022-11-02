@@ -1,9 +1,7 @@
 ﻿using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 namespace InvincibleFortress
@@ -30,7 +28,7 @@ namespace InvincibleFortress
     {
 
         public Thermostat_CompTempControl compTempControl;
-
+            
         public override void ExposeData()
         {
             base.ExposeData();
@@ -45,13 +43,24 @@ namespace InvincibleFortress
         }
 
         public override void TickRare()
-        {
-            if (compTempControl == null)
+        {            
+            if (compTempControl == null) 
             {
-                compTempControl = (Thermostat_CompTempControl)this.AllComps[0];
+                compTempControl = this.GetComps<Thermostat_CompTempControl>().First();
             }
 
-            this.GetRoom().Temperature = compTempControl.targetTemperature;
+            float ambientTemperature = base.AmbientTemperature;
+
+            float num = ((Mathf.Abs(ambientTemperature - compTempControl.targetTemperature) < 1f) ? 0f : ((ambientTemperature < compTempControl.targetTemperature - 1f) ? ((ambientTemperature < 20f) ? 1f : ((!(ambientTemperature > 200f)) ? Mathf.InverseLerp(200f, 20f, ambientTemperature) : 0f)) : ((!(ambientTemperature > compTempControl.targetTemperature + 1f)) ? 0f : ((!(ambientTemperature < -50f)) ? (-1f) : (0f - Mathf.InverseLerp(-273f, -50f, ambientTemperature))))));
+          
+            float energyLimit = 120 * num * 4.1666665f;
+           
+            float num2 = GenTemperature.ControlTemperatureTempChange(base.Position, base.Map, energyLimit, compTempControl.targetTemperature);
+           
+            if (!Mathf.Approximately(num2, 0f)) 
+            {
+                this.GetRoom().Temperature += num2;
+            }
         }
     }
 
