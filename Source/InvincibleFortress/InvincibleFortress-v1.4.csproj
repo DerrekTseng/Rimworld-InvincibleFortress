@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItemRepairer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Thermostat.cs" />
   </ItemGroup>
