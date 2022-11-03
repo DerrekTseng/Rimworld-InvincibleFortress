@@ -323,6 +323,7 @@
         <defName>InvincibleFortress_ItemRepairer</defName>
         <label>fortress item repairer</label>
         <description>A device that repair damaged objects nearby.</description>
+        <useHitPoints>false</useHitPoints>
         <graphicData>
             <texPath>InvincibleFortress/ItemRepairer</texPath>
             <graphicClass>Graphic_Single</graphicClass>
