@@ -51,6 +51,7 @@
 
                 <statOffsets>
                     <MoveSpeed>200</MoveSpeed>
+                    <CarryingCapacity>50</CarryingCapacity>
                     <ComfyTemperatureMin>-1000</ComfyTemperatureMin>
 					<ComfyTemperatureMax>1000</ComfyTemperatureMax>
                     <MeleeArmorPenetration>10</MeleeArmorPenetration>
@@ -79,6 +80,7 @@
 
                 <statFactors>
                     <MoveSpeed>5</MoveSpeed>
+                    <CarryingCapacity>200</CarryingCapacity>
                     <MeleeDamageFactor>20</MeleeDamageFactor>
                     <MeleeDoorDamageFactor>20</MeleeDoorDamageFactor>
                     <AimingDelayFactor>0</AimingDelayFactor>

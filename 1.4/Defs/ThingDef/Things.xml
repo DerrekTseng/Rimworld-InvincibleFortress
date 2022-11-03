@@ -338,6 +338,7 @@
         <canOverlapZones>true</canOverlapZones>
         <fillPercent>0</fillPercent>
         <statBases>
+            <Mass>0</Mass>
             <Flammability>0</Flammability>
             <WorkToBuild>800</WorkToBuild>
         </statBases>
@@ -365,6 +366,9 @@
         <costList>
             <Steel>100</Steel>
         </costList>
+        <thingCategories>
+            <li>Buildings</li>
+        </thingCategories>
     </ThingDef>
 
     <!--========================= Fortress Shelf =============================-->
@@ -390,7 +394,7 @@
         </statBases>
         <size>(1,1)</size>
         <building>
-            <maxItemsInCell>16</maxItemsInCell>
+            <maxItemsInCell>8</maxItemsInCell>
         </building>
     </ThingDef>
 
