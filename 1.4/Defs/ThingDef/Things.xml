@@ -18,6 +18,7 @@
             <drawSize>0.80</drawSize>
         </graphicData>
         <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
             <MarketValue>1000000</MarketValue>
             <Flammability>0</Flammability>
             <Mass>0</Mass>
@@ -51,6 +52,7 @@
         </graphicData>
         <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
         <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
             <WorkToBuild>200</WorkToBuild>
             <Flammability>0</Flammability>
         </statBases>
@@ -87,6 +89,67 @@
             </blueprintGraphicData>
         </building>
         <designationHotKey>Misc3</designationHotKey>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>12</glowRadius>
+                <glowColor>(214,148,94,0)</glowColor>
+            </li>           
+        </comps>
+    </ThingDef>
+
+    <!--========================= Fortress Column =============================-->
+    <ThingDef ParentName="BuildingBase">
+        <defName>InvincibleFortress_Column</defName>
+        <label>fortress column</label>
+        <description>fortress column</description>
+        <designationCategory>Structure</designationCategory>
+        <uiOrder>2040</uiOrder>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.25</fillPercent>
+        <useHitPoints>false</useHitPoints>
+        <pathCost>0</pathCost>
+        <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
+            <WorkToBuild>200</WorkToBuild>
+            <Mass>0</Mass>
+            <Flammability>0</Flammability>
+            <Beauty>5</Beauty>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
+        </statBases>
+        <stuffCategories>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>20</costStuffCount>
+        <costList>
+            <Steel>4</Steel>
+        </costList>
+        <holdsRoof>true</holdsRoof>
+        <canOverlapZones>false</canOverlapZones>
+        <rotatable>false</rotatable>
+        <fertility>0</fertility>
+        <specialDisplayRadius>6.9</specialDisplayRadius>
+        <building>
+            <isInert>true</isInert>
+            <ai_chillDestination>false</ai_chillDestination>
+            <paintable>true</paintable>
+        </building>
+        <graphicData>
+            <drawSize>(1,1.25)</drawSize>
+            <drawOffset>(0,0,0.2)</drawOffset>
+            <texPath>Things/Building/Furniture/Column</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shadowData>
+                <volume>(0.3, 0.5, 0.3)</volume>
+                <offset>(0,0,-0.23)</offset>
+            </shadowData>
+            <damageData>
+                <rect>(0.2,0.2,0.6,0.6)</rect>
+            </damageData>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_Styleable" />
+        </comps>
     </ThingDef>
 
     <!--========================= Fortress Door =============================-->
@@ -97,6 +160,7 @@
         <fillPercent>1</fillPercent>
         <useHitPoints>false</useHitPoints>
         <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
             <WorkToBuild>200</WorkToBuild>
             <Flammability>0</Flammability>
         </statBases>
@@ -153,7 +217,7 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <uiIconPath>Things/Building/Door/DoorSimple_MenuIcon</uiIconPath>
-        <designationHotKey>Misc1</designationHotKey>
+        <designationHotKey>Misc1</designationHotKey>       
     </ThingDef>
 
     <ThingDef ParentName="InvincibleFortress_DoorBase">
@@ -170,7 +234,7 @@
         </costList>
         <comps>
             <li Class="CompProperties_Power">
-                <compClass>CompPowerTrader</compClass>
+                <compClass>CompPowerTrader</compClass>                
                 <basePowerConsumption>50</basePowerConsumption>
             </li>
             <li Class="CompProperties_Styleable" />
@@ -190,6 +254,7 @@
         <uiIconPath>Things/Building/Linked/WaterproofConduit_MenuIcon</uiIconPath>
         <designationHotKey>Misc8</designationHotKey>
         <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
             <WorkToBuild>35</WorkToBuild>
             <Flammability>0</Flammability>
             <Beauty>0</Beauty>
@@ -218,6 +283,7 @@
         <fillPercent>1</fillPercent>
         <canOverlapZones>false</canOverlapZones>
         <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
             <WorkToBuild>500</WorkToBuild>
             <Flammability>0</Flammability>
             <Beauty>0</Beauty>
@@ -259,8 +325,8 @@
     <!--========================= Fortress Thermostat (Temperature control) =============================-->
     <ThingDef ParentName="BuildingBase">
         <defName>InvincibleFortress_Thermostat</defName>
-        <label>thermostat</label>
-        <description>thermostat</description>
+        <label>fortress thermostat</label>
+        <description>fortress thermostat</description>
         <useHitPoints>false</useHitPoints>
         <thingClass>InvincibleFortress.Building_Thermostat</thingClass>
         <graphicData>
@@ -281,6 +347,7 @@
             <li>BuildingsTemperature</li>
         </thingCategories>
         <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
             <WorkToBuild>1000</WorkToBuild>
             <Mass>0</Mass>
             <Flammability>0</Flammability>
@@ -338,6 +405,7 @@
         <canOverlapZones>true</canOverlapZones>
         <fillPercent>0</fillPercent>
         <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
             <Mass>0</Mass>
             <Flammability>0</Flammability>
             <WorkToBuild>800</WorkToBuild>
@@ -387,6 +455,7 @@
         <passability>Standable</passability>
         <pathCost>5</pathCost>
         <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
             <Flammability>0</Flammability>
             <Mass>4</Mass>
             <WorkToBuild>250</WorkToBuild>
@@ -428,6 +497,7 @@
         </thingCategories>
         <useHitPoints>false</useHitPoints>
         <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
             <Flammability>0</Flammability>
             <WorkToBuild>1800</WorkToBuild>
             <Mass>0</Mass>
@@ -507,5 +577,52 @@
             <speed>200</speed>
         </projectile>
     </ThingDef>
+
+    <!-- Recycle recipe -->
+    <RecipeDef>
+        <defName>InvincibleFortress_Recycle_Recipe</defName>
+        <label>recycle</label>
+        <description>recycle.</description>
+        <jobString>Recycling item.</jobString>
+        <workAmount>100</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <workTableEfficiencyStat>Flammability</workTableEfficiencyStat>
+        <specialProducts>
+            <li>Smelted</li>
+        </specialProducts>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Apparel</li>
+                        <li>MortarShells</li>
+                        <li>Unfinished</li>
+                        <li>BodyPartsProsthetic</li>
+                        <li>BodyPartsBionic</li>
+                        <li>BodyPartsUltra</li>
+                        <li>Weapons</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Apparel</li>
+                <li>MortarShells</li>
+                <li>Unfinished</li>
+                <li>BodyPartsProsthetic</li>
+                <li>BodyPartsBionic</li>
+                <li>BodyPartsUltra</li>
+                <li>Weapons</li>
+            </categories>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>CraftingSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
 
 </Defs>
