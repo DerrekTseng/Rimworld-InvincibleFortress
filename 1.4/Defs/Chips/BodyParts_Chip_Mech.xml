@@ -15,11 +15,11 @@
         <defName>InvincibleFortress_Install_MechChip</defName>
         <label>installed mech chip</label>
         <description>install a mech chip</description>
+        <jobString>installing a mech chip</jobString>
         <descriptionHyperlinks>
             <ThingDef>InvincibleFortress_MechChip</ThingDef>
             <HediffDef>InvincibleFortress_MechChip</HediffDef>
         </descriptionHyperlinks>
-        <jobString>installing a mech chip</jobString>
         <ingredients>
             <li>
                 <filter>
@@ -42,11 +42,11 @@
         <defName>InvincibleFortress_Remove_MechChip</defName>
         <label>remove mech chip</label>
         <description>remove the mech chip</description>
+        <jobString>removing the mech chip</jobString>
         <descriptionHyperlinks>
             <ThingDef>InvincibleFortress_MechChip</ThingDef>
             <HediffDef>InvincibleFortress_MechChip</HediffDef>
         </descriptionHyperlinks>
-        <jobString>removing the mech chip</jobString>
         <removesHediff>InvincibleFortress_MechChip</removesHediff>
     </RecipeDef>
 
@@ -61,7 +61,7 @@
         <spawnThingOnRemoved>InvincibleFortress_MechChip</spawnThingOnRemoved>
         <stages>
             <li>
-                <statOffsets>         
+                <statOffsets>
                     <MechBandwidth>256</MechBandwidth>
                     <MechControlGroups>24</MechControlGroups>
                 </statOffsets>

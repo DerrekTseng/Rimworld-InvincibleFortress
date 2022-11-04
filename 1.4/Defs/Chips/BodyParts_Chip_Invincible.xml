@@ -15,11 +15,11 @@
         <defName>InvincibleFortress_Install_InvincibleChip</defName>
         <label>installed invincible chip</label>
         <description>install a invincible chip</description>
+        <jobString>installing a invincible chip</jobString>
         <descriptionHyperlinks>
             <ThingDef>InvincibleFortress_InvincibleChip</ThingDef>
             <HediffDef>InvincibleFortress_InvincibleChip</HediffDef>
         </descriptionHyperlinks>
-        <jobString>installing a invincible chip</jobString>
         <ingredients>
             <li>
                 <filter>
@@ -42,11 +42,11 @@
         <defName>InvincibleFortress_Remove_InvincibleChip</defName>
         <label>remove invincible chip</label>
         <description>remove the invincible chip</description>
+        <jobString>removing the invincible chip</jobString>
         <descriptionHyperlinks>
             <ThingDef>InvincibleFortress_InvincibleChip</ThingDef>
             <HediffDef>InvincibleFortress_InvincibleChip</HediffDef>
         </descriptionHyperlinks>
-        <jobString>removing the invincible chip</jobString>
         <removesHediff>InvincibleFortress_InvincibleChip</removesHediff>
     </RecipeDef>
 
@@ -89,24 +89,18 @@
                     </li>
                 </capMods>
                 <statOffsets>
-                    <MoveSpeed>200</MoveSpeed>
-                    <CarryingCapacity>50</CarryingCapacity>
                     <ComfyTemperatureMin>-1000</ComfyTemperatureMin>
                     <ComfyTemperatureMax>1000</ComfyTemperatureMax>
                     <ToxicResistance>1</ToxicResistance>
                     <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
                 </statOffsets>
                 <statFactors>
-                    <MoveSpeed>5</MoveSpeed>
-                    <CarryingCapacity>200</CarryingCapacity>
                     <IncomingDamageFactor>0</IncomingDamageFactor>
                     <StaggerDurationFactor>0</StaggerDurationFactor>
-                    <PawnTrapSpringChance>0</PawnTrapSpringChance>
                     <Flammability>0</Flammability>
                     <CancerRate>0</CancerRate>
                     <FilthRate>0</FilthRate>
                 </statFactors>
-                <socialFightChanceFactor>0</socialFightChanceFactor>
                 <hungerRateFactor>0</hungerRateFactor>
             </li>
         </stages>

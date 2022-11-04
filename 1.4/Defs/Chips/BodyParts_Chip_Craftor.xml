@@ -15,11 +15,11 @@
         <defName>InvincibleFortress_Install_CraftorChip</defName>
         <label>installed craftor chip</label>
         <description>install a craftor chip</description>
+        <jobString>installing a craftor chip</jobString>
         <descriptionHyperlinks>
             <ThingDef>InvincibleFortress_CraftorChip</ThingDef>
             <HediffDef>InvincibleFortress_CraftorChip</HediffDef>
         </descriptionHyperlinks>
-        <jobString>installing a craftor chip</jobString>
         <ingredients>
             <li>
                 <filter>
@@ -42,11 +42,11 @@
         <defName>InvincibleFortress_Remove_CraftorChip</defName>
         <label>remove craftor chip</label>
         <description>remove the craftor chip</description>
+        <jobString>removing the craftor chip</jobString>
         <descriptionHyperlinks>
             <ThingDef>InvincibleFortress_CraftorChip</ThingDef>
             <HediffDef>InvincibleFortress_CraftorChip</HediffDef>
         </descriptionHyperlinks>
-        <jobString>removing the craftor chip</jobString>
         <removesHediff>InvincibleFortress_CraftorChip</removesHediff>
     </RecipeDef>
 
@@ -62,8 +62,6 @@
         <stages>
             <li>
                 <statOffsets>
-                    <MoveSpeed>200</MoveSpeed>
-                    <CarryingCapacity>50</CarryingCapacity>
                     <ButcheryFleshSpeed>1.0</ButcheryFleshSpeed>
                     <ButcheryMechanoidSpeed>1.0</ButcheryMechanoidSpeed>
                     <WorkSpeedGlobal>1.0</WorkSpeedGlobal>
@@ -89,8 +87,6 @@
                     <FixBrokenDownBuildingSuccessChance>2.0</FixBrokenDownBuildingSuccessChance>
                 </statOffsets>
                 <statFactors>
-                    <MoveSpeed>5</MoveSpeed>
-                    <CarryingCapacity>200</CarryingCapacity>
                     <ButcheryFleshSpeed>5</ButcheryFleshSpeed>
                     <ButcheryMechanoidSpeed>5</ButcheryMechanoidSpeed>
                     <WorkSpeedGlobal>5</WorkSpeedGlobal>
@@ -116,13 +112,13 @@
                     <ButcheryMechanoidEfficiency>2</ButcheryMechanoidEfficiency>
                     <ButcheryFleshEfficiency>2</ButcheryFleshEfficiency>
                     <MedicalSurgerySuccessChance>2</MedicalSurgerySuccessChance>
-                    <FoodPoisonChance>0</FoodPoisonChance>
                     <TameAnimalChance>2</TameAnimalChance>
                     <TrainAnimalChance>2</TrainAnimalChance>
                     <MedicalTendQuality>2</MedicalTendQuality>
                     <ArrestSuccessChance>2</ArrestSuccessChance>
                     <SuppressionPower>2</SuppressionPower>
                     <PlantHarvestYield>2</PlantHarvestYield>
+                    <FoodPoisonChance>0</FoodPoisonChance>
                 </statFactors>
             </li>
         </stages>

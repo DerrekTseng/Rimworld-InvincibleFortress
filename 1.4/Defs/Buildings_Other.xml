@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-    
+
     <!--========================= Fortress Thermostat (Temperature control) =============================-->
     <ThingDef ParentName="BuildingBase">
         <defName>InvincibleFortress_Thermostat</defName>
@@ -118,7 +118,5 @@
             <li>Buildings</li>
         </thingCategories>
     </ThingDef>
-
-
 
 </Defs>

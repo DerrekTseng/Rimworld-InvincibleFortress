@@ -23,6 +23,9 @@
         <thingCategories>
             <li>InvincibleFortress_BodyParts</li>
         </thingCategories>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+        </comps>
     </ThingDef>
 
     <RecipeDef Name="InvincibleFortress_Chip_InstallBase" ParentName="SurgeryInstallImplantBase" Abstract="True">
