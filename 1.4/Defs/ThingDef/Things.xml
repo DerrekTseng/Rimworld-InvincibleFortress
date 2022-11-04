@@ -93,7 +93,7 @@
             <li Class="CompProperties_Glower">
                 <glowRadius>12</glowRadius>
                 <glowColor>(214,148,94,0)</glowColor>
-            </li>           
+            </li>
         </comps>
     </ThingDef>
 
@@ -217,7 +217,7 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <uiIconPath>Things/Building/Door/DoorSimple_MenuIcon</uiIconPath>
-        <designationHotKey>Misc1</designationHotKey>       
+        <designationHotKey>Misc1</designationHotKey>
     </ThingDef>
 
     <ThingDef ParentName="InvincibleFortress_DoorBase">
@@ -234,7 +234,7 @@
         </costList>
         <comps>
             <li Class="CompProperties_Power">
-                <compClass>CompPowerTrader</compClass>                
+                <compClass>CompPowerTrader</compClass>
                 <basePowerConsumption>50</basePowerConsumption>
             </li>
             <li Class="CompProperties_Styleable" />
@@ -299,7 +299,7 @@
         <comps>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerPlant</compClass>
-                <basePowerConsumption>-2000</basePowerConsumption>
+                <basePowerConsumption>-20000</basePowerConsumption>
                 <transmitsPower>true</transmitsPower>
             </li>
             <li Class="CompProperties_Glower">
@@ -464,6 +464,11 @@
         <size>(1,1)</size>
         <building>
             <maxItemsInCell>8</maxItemsInCell>
+            <fixedStorageSettings>
+                <filter>
+                    <disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech" Inherit="False" />
+                </filter>
+            </fixedStorageSettings>
         </building>
     </ThingDef>
 
