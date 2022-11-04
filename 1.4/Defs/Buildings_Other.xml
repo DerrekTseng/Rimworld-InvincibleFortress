@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    
+    <!--========================= Fortress Thermostat (Temperature control) =============================-->
+    <ThingDef ParentName="BuildingBase">
+        <defName>InvincibleFortress_Thermostat</defName>
+        <label>fortress thermostat</label>
+        <description>fortress thermostat</description>
+        <useHitPoints>false</useHitPoints>
+        <thingClass>InvincibleFortress.Building_Thermostat</thingClass>
+        <graphicData>
+            <texPath>InvincibleFortress/Thermostat</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shadowData>
+                <volume>(0.7,0.1,0.7)</volume>
+            </shadowData>
+        </graphicData>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <altitudeLayer>DoorMoveable</altitudeLayer>
+        <passability>Standable</passability>
+        <pathCost>0</pathCost>
+        <blockWind>false</blockWind>
+        <rotatable>false</rotatable>
+        <fillPercent>0</fillPercent>
+        <thingCategories>
+            <li>BuildingsTemperature</li>
+        </thingCategories>
+        <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
+            <WorkToBuild>1000</WorkToBuild>
+            <Mass>0</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <tickerType>Rare</tickerType>
+        <costList>
+            <Steel>50</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <placeWorkers>
+            <li>InvincibleFortress.PlaceWorker_Thermostat</li>
+        </placeWorkers>
+        <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+        <comps>
+            <li Class="InvincibleFortress.CompProperties_Thermostat_TempControl" />
+        </comps>
+        <designationCategory>Temperature</designationCategory>
+        <building>
+            <isEdifice>false</isEdifice>
+        </building>
+        <canOverlapZones>true</canOverlapZones>
+        <clearBuildingArea>false</clearBuildingArea>
+    </ThingDef>
+
+    <!--========================= Fortress Item Repairer =============================-->
+    <GameConditionDef>
+        <defName>InvincibleFortress_ItemRepairer_Condition</defName>
+        <conditionClass>InvincibleFortress.GameCondition_ItemRepairer</conditionClass>
+        <label>fortress item repairer</label>
+        <description>Automatically repair damaged objects.</description>
+        <endMessage>Fortress item repairer has disappeared.</endMessage>
+        <letterText>Automatically repair damaged objects.</letterText>
+        <letterDef>PositiveEvent</letterDef>
+        <canBePermanent>true</canBePermanent>
+    </GameConditionDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>InvincibleFortress_ItemRepairer</defName>
+        <label>fortress item repairer</label>
+        <description>A device that repair damaged objects nearby.</description>
+        <useHitPoints>false</useHitPoints>
+        <graphicData>
+            <texPath>InvincibleFortress/ItemRepairer</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shadowData>
+                <volume>(0.7,0.1,0.7)</volume>
+            </shadowData>
+        </graphicData>
+        <size>(1,1)</size>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>Standable</passability>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <pathCost>0</pathCost>
+        <canOverlapZones>true</canOverlapZones>
+        <fillPercent>0</fillPercent>
+        <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
+            <Mass>0</Mass>
+            <Flammability>0</Flammability>
+            <WorkToBuild>800</WorkToBuild>
+        </statBases>
+        <tickerType>Normal</tickerType>
+        <building>
+            <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+            <soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+            <ai_chillDestination>false</ai_chillDestination>
+        </building>
+        <comps>
+            <li Class="CompProperties_CausesGameCondition">
+                <conditionDef>InvincibleFortress_ItemRepairer_Condition</conditionDef>
+                <worldRange>1</worldRange>
+            </li>
+        </comps>
+        <rotatable>false</rotatable>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+        <constructEffect>ConstructMetal</constructEffect>
+        <repairEffect>ConstructMetal</repairEffect>
+        <designationCategory>Misc</designationCategory>
+        <placeWorkers>
+            <li>InvincibleFortress.PlaceWorker_ItemRepairer_OneInMap</li>
+        </placeWorkers>
+        <costList>
+            <Steel>100</Steel>
+        </costList>
+        <thingCategories>
+            <li>Buildings</li>
+        </thingCategories>
+    </ThingDef>
+
+
+
+</Defs>
