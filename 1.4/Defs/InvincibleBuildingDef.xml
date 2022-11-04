@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-
-    <!--========================= Fnvincible Chip =============================-->
-    <ThingDef ParentName="BodyPartBase">
-        <defName>InvincibleFortress_InvincibleChip</defName>
-        <label>invincible chip</label>
-        <description>invincible chip</description>
-        <useHitPoints>false</useHitPoints>
-        <descriptionHyperlinks>
-            <RecipeDef>InvincibleFortress_Install_InvincibleChip</RecipeDef>
-        </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Health/HealthItem</texPath>
-            <color>(255,215,0)</color>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>0.80</drawSize>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>1000000</MaxHitPoints>
-            <MarketValue>1000000</MarketValue>
-            <Flammability>0</Flammability>
-            <Mass>0</Mass>
-            <Beauty>0</Beauty>
-            <DeteriorationRate>0</DeteriorationRate>
-        </statBases>
-        <thingSetMakerTags>
-            <li>RewardStandardHighFreq</li>
-        </thingSetMakerTags>
-        <thingCategories>
-            <li>InvincibleFortress_BodyParts</li>
-        </thingCategories>
-    </ThingDef>
-
+  
     <!--========================= Fortress Wall =============================-->
     <ThingDef ParentName="BuildingBase">
         <defName>InvincibleFortress_Wall</defName>

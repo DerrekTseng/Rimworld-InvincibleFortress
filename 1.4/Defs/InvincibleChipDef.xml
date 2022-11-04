@@ -1,23 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
+
+    <ThingCategoryDef>
+        <defName>InvincibleFortress_BodyParts</defName>
+        <label>invincible fortress</label>
+        <parent>BodyParts</parent>
+    </ThingCategoryDef>
+
+    <ThingDef ParentName="BodyPartBase">
+        <defName>InvincibleFortress_InvincibleChip</defName>
+        <label>invincible chip</label>
+        <description>invincible chip</description>
+        <useHitPoints>false</useHitPoints>
+        <descriptionHyperlinks>
+            <RecipeDef>InvincibleFortress_Install_InvincibleChip</RecipeDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <color>(255,215,0)</color>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.80</drawSize>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
+            <MarketValue>1000000</MarketValue>
+            <Flammability>0</Flammability>
+            <Mass>0</Mass>
+            <Beauty>0</Beauty>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <thingSetMakerTags>
+            <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+        <thingCategories>
+            <li>InvincibleFortress_BodyParts</li>
+        </thingCategories>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InvincibleFortress_Install_InvincibleChip</defName>
+        <label>installed invincible chip</label>
+        <description>install a invincible chip</description>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_InvincibleChip</ThingDef>
+            <HediffDef>InvincibleFortress_InvincibleChip</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>installing a invincible chip</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>InvincibleFortress_InvincibleChip</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>InvincibleFortress_InvincibleChip</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>InvincibleFortress_InvincibleChip</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>InvincibleFortress_Remove_InvincibleChip</defName>
+        <label>remove invincible chip</label>
+        <description>remove the invincible chip</description>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_InvincibleChip</ThingDef>
+            <HediffDef>InvincibleFortress_InvincibleChip</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>removing the invincible chip</jobString>
+        <removesHediff>InvincibleFortress_InvincibleChip</removesHediff>
+    </RecipeDef>
+
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>InvincibleFortress_InvincibleChip</defName>
         <label>invincible chip</label>
         <labelNoun>invincible chip</labelNoun>
         <description>installed invincible chip</description>
-
         <descriptionHyperlinks>
             <ThingDef>InvincibleFortress_InvincibleChip</ThingDef>
         </descriptionHyperlinks>
         <spawnThingOnRemoved>InvincibleFortress_InvincibleChip</spawnThingOnRemoved>
-
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>2</partEfficiency>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
-
         <disablesNeeds>
             <li>Rest</li>
             <li>Joy</li>
@@ -35,7 +111,6 @@
             <li>Play</li>
             <li>MechEnergy</li>
         </disablesNeeds>
-
         <stages>
             <li>
                 <capMods>
@@ -48,12 +123,11 @@
                         <setMax>2</setMax>
                     </li>
                 </capMods>
-
                 <statOffsets>
                     <MoveSpeed>200</MoveSpeed>
                     <CarryingCapacity>50</CarryingCapacity>
                     <ComfyTemperatureMin>-1000</ComfyTemperatureMin>
-					<ComfyTemperatureMax>1000</ComfyTemperatureMax>
+                    <ComfyTemperatureMax>1000</ComfyTemperatureMax>
                     <MeleeArmorPenetration>10</MeleeArmorPenetration>
                     <MeleeHitChance>10</MeleeHitChance>
                     <MeleeHitChanceOutdoorsDarkOffset>10</MeleeHitChanceOutdoorsDarkOffset>
@@ -77,7 +151,6 @@
                     <ToxicResistance>1</ToxicResistance>
                     <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
                 </statOffsets>
-
                 <statFactors>
                     <MoveSpeed>5</MoveSpeed>
                     <CarryingCapacity>200</CarryingCapacity>
@@ -119,11 +192,24 @@
                     <CancerRate>0</CancerRate>
                     <FilthRate>0</FilthRate>
                 </statFactors>
-
                 <socialFightChanceFactor>0</socialFightChanceFactor>
                 <hungerRateFactor>0</hungerRateFactor>
             </li>
         </stages>
-
     </HediffDef>
+
+    <ThoughtDef>
+        <defName>InvincibleFortress_Thought_InvincibleChip</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>InvincibleFortress_InvincibleChip</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>invincible chip</label>
+                <description>installed invincible chip</description>
+                <baseMoodEffect>200</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
 </Defs>

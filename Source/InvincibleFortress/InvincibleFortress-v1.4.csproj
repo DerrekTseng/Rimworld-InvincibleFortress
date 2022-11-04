@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="ItemRepairer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roof.cs" />
     <Compile Include="Thermostat.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
