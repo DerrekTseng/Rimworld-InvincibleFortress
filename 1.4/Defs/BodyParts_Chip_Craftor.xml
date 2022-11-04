@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <ThingDef ParentName="InvincibleFortress_Chip_BodyPartBase">
+        <defName>InvincibleFortress_CraftorChip</defName>
+        <label>craftor chip</label>
+        <description>craftor chip</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InvincibleFortress_Install_CraftorChip</RecipeDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+
+    <RecipeDef ParentName="InvincibleFortress_Chip_InstallBase">
+        <defName>InvincibleFortress_Install_CraftorChip</defName>
+        <label>installed craftor chip</label>
+        <description>install a craftor chip</description>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_CraftorChip</ThingDef>
+            <HediffDef>InvincibleFortress_CraftorChip</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>installing a craftor chip</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>InvincibleFortress_CraftorChip</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>InvincibleFortress_CraftorChip</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <addsHediff>InvincibleFortress_CraftorChip</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="InvincibleFortress_Chip_RemoveBase">
+        <defName>InvincibleFortress_Remove_CraftorChip</defName>
+        <label>remove craftor chip</label>
+        <description>remove the craftor chip</description>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_CraftorChip</ThingDef>
+            <HediffDef>InvincibleFortress_CraftorChip</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>removing the craftor chip</jobString>
+        <removesHediff>InvincibleFortress_CraftorChip</removesHediff>
+    </RecipeDef>
+
+    <HediffDef ParentName="InvincibleFortress_Chip_HediffBase">
+        <defName>InvincibleFortress_CraftorChip</defName>
+        <label>craftor chip</label>
+        <labelNoun>craftor chip</labelNoun>
+        <description>installed craftor chip</description>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_CraftorChip</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>InvincibleFortress_CraftorChip</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MoveSpeed>200</MoveSpeed>
+                    <CarryingCapacity>50</CarryingCapacity>
+                    <ButcheryFleshSpeed>1.0</ButcheryFleshSpeed>
+                    <ButcheryMechanoidSpeed>1.0</ButcheryMechanoidSpeed>
+                    <WorkSpeedGlobal>1.0</WorkSpeedGlobal>
+                    <MiningSpeed>1.0</MiningSpeed>
+                    <DeepDrillingSpeed>1.0</DeepDrillingSpeed>
+                    <SmoothingSpeed>1.0</SmoothingSpeed>
+                    <ResearchSpeed>1.0</ResearchSpeed>
+                    <AnimalGatherSpeed>1.0</AnimalGatherSpeed>
+                    <PlantWorkSpeed>1.0</PlantWorkSpeed>
+                    <ConstructionSpeed>1.0</ConstructionSpeed>
+                    <CleaningSpeed>1.0</CleaningSpeed>
+                    <MedicalTendSpeed>1.0</MedicalTendSpeed>
+                    <MedicalOperationSpeed>1.0</MedicalOperationSpeed>
+                    <SmeltingSpeed>1.0</SmeltingSpeed>
+                    <GeneralLaborSpeed>1.0</GeneralLaborSpeed>
+                    <DrugSynthesisSpeed>1.0</DrugSynthesisSpeed>
+                    <CookSpeed>1.0</CookSpeed>
+                    <DrugCookingSpeed>1.0</DrugCookingSpeed>
+                    <HackingSpeed>1.0</HackingSpeed>
+                    <PruningSpeed>1.0</PruningSpeed>
+                    <GlobalLearningFactor>1.0</GlobalLearningFactor>
+                    <ConstructSuccessChance>2.0</ConstructSuccessChance>
+                    <FixBrokenDownBuildingSuccessChance>2.0</FixBrokenDownBuildingSuccessChance>
+                </statOffsets>
+                <statFactors>
+                    <MoveSpeed>5</MoveSpeed>
+                    <CarryingCapacity>200</CarryingCapacity>
+                    <ButcheryFleshSpeed>5</ButcheryFleshSpeed>
+                    <ButcheryMechanoidSpeed>5</ButcheryMechanoidSpeed>
+                    <WorkSpeedGlobal>5</WorkSpeedGlobal>
+                    <MiningSpeed>5</MiningSpeed>
+                    <DeepDrillingSpeed>5</DeepDrillingSpeed>
+                    <SmoothingSpeed>5</SmoothingSpeed>
+                    <ResearchSpeed>5</ResearchSpeed>
+                    <AnimalGatherSpeed>5</AnimalGatherSpeed>
+                    <PlantWorkSpeed>5</PlantWorkSpeed>
+                    <MedicalTendSpeed>5</MedicalTendSpeed>
+                    <MedicalOperationSpeed>5</MedicalOperationSpeed>
+                    <SmeltingSpeed>5</SmeltingSpeed>
+                    <GeneralLaborSpeed>5</GeneralLaborSpeed>
+                    <DrugSynthesisSpeed>5</DrugSynthesisSpeed>
+                    <CookSpeed>5</CookSpeed>
+                    <DrugCookingSpeed>5</DrugCookingSpeed>
+                    <HackingSpeed>5</HackingSpeed>
+                    <PruningSpeed>5</PruningSpeed>
+                    <GlobalLearningFactor>5.0</GlobalLearningFactor>
+                    <MiningYield>2</MiningYield>
+                    <AnimalGatherYield>2</AnimalGatherYield>
+                    <DrugHarvestYield>2</DrugHarvestYield>
+                    <ButcheryMechanoidEfficiency>2</ButcheryMechanoidEfficiency>
+                    <ButcheryFleshEfficiency>2</ButcheryFleshEfficiency>
+                    <MedicalSurgerySuccessChance>2</MedicalSurgerySuccessChance>
+                    <FoodPoisonChance>0</FoodPoisonChance>
+                    <TameAnimalChance>2</TameAnimalChance>
+                    <TrainAnimalChance>2</TrainAnimalChance>
+                    <MedicalTendQuality>2</MedicalTendQuality>
+                    <ArrestSuccessChance>2</ArrestSuccessChance>
+                    <SuppressionPower>2</SuppressionPower>
+                    <PlantHarvestYield>2</PlantHarvestYield>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

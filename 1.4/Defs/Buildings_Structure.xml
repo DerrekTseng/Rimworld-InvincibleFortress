@@ -48,9 +48,6 @@
                 <volume>(0.3, 0.5, 0.3)</volume>
                 <offset>(0,0,-0.23)</offset>
             </shadowData>
-            <damageData>
-                <rect>(0.2,0.2,0.6,0.6)</rect>
-            </damageData>
         </graphicData>
         <comps>
             <li Class="CompProperties_Styleable" />
@@ -58,12 +55,10 @@
     </ThingDef>
 
     <!--========================= Fortress Wall =============================-->
-    <ThingDef ParentName="BuildingBase">
-        <defName>InvincibleFortress_Wall</defName>
-        <label>fortress wall</label>
+    <ThingDef ParentName="BuildingBase" Name="InvincibleFortress_WallBase" Abstract="True">
         <thingClass>Building</thingClass>
         <category>Building</category>
-        <description>fortress wall</description>
+        <designationCategory>Structure</designationCategory>
         <useHitPoints>false</useHitPoints>
         <graphicData>
             <texPath>Things/Building/Linked/Wall</texPath>
@@ -94,7 +89,6 @@
         <neverMultiSelect>true</neverMultiSelect>
         <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
         <holdsRoof>true</holdsRoof>
-        <designationCategory>Structure</designationCategory>
         <staticSunShadowHeight>1.0</staticSunShadowHeight>
         <blockLight>true</blockLight>
         <canOverlapZones>false</canOverlapZones>
@@ -102,9 +96,6 @@
             <li>Stony</li>
         </stuffCategories>
         <costStuffCount>4</costStuffCount>
-        <costList>
-            <Steel>4</Steel>
-        </costList>
         <building>
             <isInert>true</isInert>
             <ai_chillDestination>false</ai_chillDestination>
@@ -113,9 +104,28 @@
             </blueprintGraphicData>
         </building>
         <designationHotKey>Misc3</designationHotKey>
+    </ThingDef>
+
+    <ThingDef ParentName="InvincibleFortress_WallBase">
+        <defName>InvincibleFortress_Wall</defName>
+        <label>fortress wall</label>
+        <description>fortress wall</description>
+        <costList>
+            <Steel>2</Steel>
+        </costList>
+    </ThingDef>
+
+    <ThingDef ParentName="InvincibleFortress_WallBase">
+        <defName>InvincibleFortress_LightWall</defName>
+        <label>fortress light wall</label>
+        <description>fortress light wall</description>
+        <costList>
+            <Steel>2</Steel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
         <comps>
             <li Class="CompProperties_Glower">
-                <glowRadius>12</glowRadius>
+                <glowRadius>16</glowRadius>
                 <glowColor>(214,148,94,0)</glowColor>
             </li>
         </comps>
@@ -125,6 +135,7 @@
     <ThingDef ParentName="BuildingBase" Name="InvincibleFortress_DoorBase" Abstract="True">
         <thingClass>Building_Door</thingClass>
         <category>Building</category>
+        <designationCategory>Structure</designationCategory>
         <altitudeLayer>DoorMoveable</altitudeLayer>
         <fillPercent>1</fillPercent>
         <useHitPoints>false</useHitPoints>
@@ -136,9 +147,9 @@
         <stuffCategories>
             <li>Stony</li>
         </stuffCategories>
-        <costStuffCount>25</costStuffCount>
+        <costStuffCount>10</costStuffCount>
         <costList>
-            <Steel>20</Steel>
+            <Steel>5</Steel>
         </costList>
         <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
         <selectable>true</selectable>
@@ -147,7 +158,6 @@
         <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
         <useStuffTerrainAffordance>true</useStuffTerrainAffordance>
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-        <designationCategory>Structure</designationCategory>
         <uiOrder>2010</uiOrder>
         <holdsRoof>true</holdsRoof>
         <staticSunShadowHeight>1.0</staticSunShadowHeight>
@@ -199,12 +209,12 @@
         </graphicData>
         <uiIconPath>Things/Building/Door/Autodoor_MenuIcon</uiIconPath>
         <costList>
-            <ComponentIndustrial>2</ComponentIndustrial>
+            <ComponentIndustrial>1</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>50</basePowerConsumption>
+                <basePowerConsumption>10</basePowerConsumption>
             </li>
             <li Class="CompProperties_Styleable" />
         </comps>

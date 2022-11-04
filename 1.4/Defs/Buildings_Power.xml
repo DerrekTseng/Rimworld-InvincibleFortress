@@ -9,9 +9,9 @@
         <description>fortress power conduit</description>
         <useHitPoints>false</useHitPoints>
         <graphicData>
-            <texPath>Things/Building/Linked/WaterproofConduit_Atlas</texPath>
+            <texPath>Things/Building/Linked/PowerConduit_Atlas</texPath>
         </graphicData>
-        <uiIconPath>Things/Building/Linked/WaterproofConduit_MenuIcon</uiIconPath>
+        <uiIconPath>Things/Building/Linked/PowerConduit_MenuIcon</uiIconPath>
         <designationHotKey>Misc8</designationHotKey>
         <statBases>
             <MaxHitPoints>1000000</MaxHitPoints>
