@@ -39,15 +39,6 @@ namespace InvincibleFortress
                     break;
                 }
             }
-
-            foreach (Building building in map.listerBuildings.allBuildingsColonist)
-            {
-                if (building.def.useHitPoints && building.HitPoints < building.MaxHitPoints)
-                {
-                    building.HitPoints = building.MaxHitPoints;
-                }
-            }
-
         }
 
         private bool TryRepairPawnHolder(Pawn pawn)

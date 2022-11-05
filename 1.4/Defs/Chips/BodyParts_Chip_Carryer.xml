@@ -62,10 +62,10 @@
         <stages>
             <li>
                 <statOffsets>
-                    <CarryingCapacity>50</CarryingCapacity>
+                    <CarryingCapacity>200</CarryingCapacity>
                 </statOffsets>
                 <statFactors>
-                    <CarryingCapacity>200</CarryingCapacity>
+                    <CarryingCapacity>500</CarryingCapacity>
                 </statFactors>
             </li>
         </stages>
