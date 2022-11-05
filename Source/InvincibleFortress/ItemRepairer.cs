@@ -45,7 +45,6 @@ namespace InvincibleFortress
                 if (building.def.useHitPoints && building.HitPoints < building.MaxHitPoints)
                 {
                     building.HitPoints = building.MaxHitPoints;
-                    Log.Message("Building [" + building.def.defName + "] is repaired");
                 }
             }
 
