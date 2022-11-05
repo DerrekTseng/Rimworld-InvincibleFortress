@@ -3,10 +3,7 @@
 <Defs>
 
     <!--========================= Fortress Column =============================-->
-    <ThingDef ParentName="BuildingBase">
-        <defName>InvincibleFortress_Column</defName>
-        <label>fortress column</label>
-        <description>fortress column</description>
+    <ThingDef ParentName="BuildingBase" Name="InvincibleFortress_ColumnBase" Abstract="True">
         <designationCategory>Structure</designationCategory>
         <uiOrder>2040</uiOrder>
         <altitudeLayer>Building</altitudeLayer>
@@ -25,10 +22,7 @@
         <stuffCategories>
             <li>Stony</li>
         </stuffCategories>
-        <costStuffCount>20</costStuffCount>
-        <costList>
-            <Steel>4</Steel>
-        </costList>
+        <costStuffCount>8</costStuffCount>
         <holdsRoof>true</holdsRoof>
         <canOverlapZones>false</canOverlapZones>
         <rotatable>false</rotatable>
@@ -51,6 +45,32 @@
         </graphicData>
         <comps>
             <li Class="CompProperties_Styleable" />
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="InvincibleFortress_ColumnBase">
+        <defName>InvincibleFortress_Column</defName>
+        <label>fortress column</label>
+        <description>fortress column</description>
+        <costList>
+            <Steel>2</Steel>
+        </costList>
+    </ThingDef>
+
+    <ThingDef ParentName="InvincibleFortress_ColumnBase">
+        <defName>InvincibleFortress_LightColumn</defName>
+        <label>fortress light column</label>
+        <description>fortress light column</description>
+        <costList>
+            <Steel>2</Steel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <overlightRadius>16</overlightRadius>
+                <glowRadius>16</glowRadius>
+                <glowColor>(370,370,370,0)</glowColor>
+            </li>
         </comps>
     </ThingDef>
 
@@ -125,8 +145,9 @@
         </costList>
         <comps>
             <li Class="CompProperties_Glower">
+                <overlightRadius>16</overlightRadius>
                 <glowRadius>16</glowRadius>
-                <glowColor>(214,148,94,0)</glowColor>
+                <glowColor>(370,370,370,0)</glowColor>
             </li>
         </comps>
     </ThingDef>
