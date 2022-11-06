@@ -404,5 +404,22 @@
         </recipeUsers>
     </RecipeDef>
 
+    <!-- Luciferium -->
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_Luciferium</defName>
+        <label>luciferium</label>
+        <description>luciferium</description>
+        <jobString>Making luciferium</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <Luciferium>150</Luciferium>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
 
 </Defs>
