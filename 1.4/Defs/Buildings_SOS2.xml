@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Heatsinks -->
+	<ThingDef ParentName="BuildingBase" MayRequire="kentington.saveourship2">
+		<defName>InvincibleFortress_ShipHeatsink</defName>
+		<designatorDropdown>Ship_Heatsinks</designatorDropdown>
+		<label>fortress heatsink</label>
+		<altitudeLayer>WorldClipper</altitudeLayer>
+		<description>fortress heatsink.\n\nHeat capacity: 1000k</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<blockLight>false</blockLight>
+		<blockWind>false</blockWind>
+		<selectable>true</selectable>
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>false</rotatable>
+		<castEdgeShadows>true</castEdgeShadows>
+		<useHitPoints>false</useHitPoints>
+		<fillPercent>1</fillPercent>
+		<tickerType>Normal</tickerType>
+		<constructEffect>ConstructMetal</constructEffect>
+		<size>(1,1)</size>
+		<graphicData>
+			<texPath>Things/Building/Ship/Heatsink</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<statBases>
+			<WorkToBuild>100</WorkToBuild>
+			<Flammability>0</Flammability>
+			<Beauty>0</Beauty>
+		</statBases>
+		<passability>PassThroughOnly</passability>
+		<seeThroughFog>true</seeThroughFog>
+		<pathCost>0</pathCost>
+		<costList>
+			<Steel>50</Steel>
+		</costList>
+		<comps>
+			<li Class="CompProperties_ShipHeat">
+				<compClass>CompShipHeatSink</compClass>
+				<heatCapacity>1000000</heatCapacity>
+				<heatVent>0</heatVent>
+				<heatLoss>10000</heatLoss>
+				<threat>0</threat>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTransmitter</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_Heater</li>
+			<li>PlaceWorker_OnShipHull</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationCategory>Ship</designationCategory>
+	</ThingDef>
+
+</Defs>

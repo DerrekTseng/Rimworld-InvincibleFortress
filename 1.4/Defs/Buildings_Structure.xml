@@ -106,7 +106,7 @@
         <tickerType>Never</tickerType>
         <rotatable>false</rotatable>
         <selectable>true</selectable>
-        <neverMultiSelect>true</neverMultiSelect>
+        <neverMultiSelect>false</neverMultiSelect>
         <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
         <holdsRoof>true</holdsRoof>
         <staticSunShadowHeight>1.0</staticSunShadowHeight>

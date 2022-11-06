@@ -40,7 +40,7 @@
         <pathCost>0</pathCost>
         <passability>PassThroughOnly</passability>
         <castEdgeShadows>true</castEdgeShadows>
-        <fillPercent>1</fillPercent>
+        <fillPercent>0.6</fillPercent>
         <canOverlapZones>false</canOverlapZones>
         <statBases>
             <MaxHitPoints>1000000</MaxHitPoints>
@@ -80,6 +80,60 @@
         <thingCategories>
             <li>BuildingsPower</li>
         </thingCategories>
+    </ThingDef>
+
+    <!--========================= Fortress Battery =============================-->
+    <ThingDef ParentName="BuildingBase">
+        <defName>InvincibleFortress_Battery</defName>
+        <label>fortress battery</label>
+        <description>fortress battery</description>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <thingClass>Building_Battery</thingClass>
+        <useHitPoints>false</useHitPoints>
+        <graphicData>
+            <texPath>InvincibleFortress/Battery</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,3)</drawSize>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>0</pathCost>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>1</fillPercent>        
+        <tickerType>Normal</tickerType>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsPower</li>
+        </thingCategories>
+        <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
+            <WorkToBuild>100</WorkToBuild>
+            <Mass>0</Mass>
+            <Flammability>0</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <size>(1,2)</size>
+        <building>
+            <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+        </building>
+        <costList>
+            <Steel>50</Steel>            
+        </costList>
+        <comps>
+            <li Class="CompProperties_Battery">
+                <storedEnergyMax>1000000</storedEnergyMax>
+                <efficiency>1</efficiency>
+                <shortCircuitInRain>false</shortCircuitInRain>
+                <transmitsPower>true</transmitsPower>
+            </li>
+        </comps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <designationCategory>Power</designationCategory>
+        <uiOrder>2020</uiOrder>
+        <constructEffect>ConstructMetal</constructEffect>
+        <designationHotKey>Misc4</designationHotKey>
+        <canOverlapZones>false</canOverlapZones>
     </ThingDef>
 
 </Defs>
