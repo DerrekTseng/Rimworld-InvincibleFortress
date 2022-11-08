@@ -119,4 +119,48 @@
         </thingCategories>
     </ThingDef>
 
+    <!-- MoisturePump -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>InvincibleFortress_MoisturePump</defName>
+        <label>fortress moisture pump</label>
+        <description>fortress moisture pump</description>
+        <useHitPoints>false</useHitPoints>
+        <graphicData>
+            <texPath>Things/Building/Misc/MoisturePump</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shadowData>
+                <volume>(0.58, 0.35, 0.25)</volume>
+                <offset>(0,0,-0.1)</offset>
+            </shadowData>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_TerrainPumpDry">
+                <soundWorking>MoisturePump_Ambience</soundWorking>
+                <radius>24</radius>
+                <daysToRadius>1</daysToRadius>
+            </li>
+        </comps>
+        <tickerType>Rare</tickerType>
+        <altitudeLayer>Building</altitudeLayer>
+        <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
+            <WorkToBuild>100</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <fillPercent>0.15</fillPercent>
+        <building>
+            <ai_chillDestination>false</ai_chillDestination>
+            <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+        </building>
+        <costList>
+            <Steel>50</Steel>
+        </costList>
+        <specialDisplayRadius>24</specialDisplayRadius>
+        <pathCost>0</pathCost>
+        <passability>PassThroughOnly</passability>
+        <designationCategory>Misc</designationCategory>
+        <rotatable>false</rotatable>
+    </ThingDef>
+
 </Defs>
