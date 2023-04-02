@@ -5,8 +5,7 @@
     <RoofDef>
         <defName>InvincibleFortressRoof</defName>
         <label>fortress roof</label>
-        <isThickRoof>true</isThickRoof>
-        <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+        <isThickRoof>true</isThickRoof>       
         <soundPunchThrough>PunchThroughRoofMetal</soundPunchThrough>
     </RoofDef>
 
@@ -24,9 +23,6 @@
             <graphicClass>Graphic_Single</graphicClass>
             <texPath>InvincibleFortress/Roof</texPath>
         </graphicData>
-        <costList>
-            <Steel>1</Steel>
-        </costList>
         <uiIconPath>UI/Designators/BuildRoofArea</uiIconPath>
         <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
         <altitudeLayer>BuildingOnTop</altitudeLayer>

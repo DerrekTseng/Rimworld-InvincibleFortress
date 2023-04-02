@@ -40,7 +40,7 @@
 		<comps>
 			<li Class="CompProperties_ShipHeat">
 				<compClass>CompShipHeatSink</compClass>
-				<heatCapacity>1000000</heatCapacity>
+				<heatCapacity>10000000</heatCapacity>
 				<heatVent>0</heatVent>
 				<heatLoss>10000</heatLoss>
 				<threat>0</threat>
@@ -63,4 +63,175 @@
 		<designationCategory>Ship</designationCategory>
 	</ThingDef>
 
+	<!-- ShipBeam -->
+	<ThingDef ParentName="BuildingBase" MayRequire="kentington.saveourship2">
+		<defName>InvincibleFortress_Ship_Beam</defName>
+		<label>fortress ship hull</label>
+		<designatorDropdown>Ship_Beams</designatorDropdown>
+		<thingClass>Building</thingClass>
+		<useHitPoints>false</useHitPoints>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<holdsRoof>true</holdsRoof>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<killedLeavings>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+		</killedLeavings>
+		<graphicData>
+			<texPath>Things/Building/Linked/ShipBeam/ShipBeam_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>Basic</linkType>
+			<linkFlags>
+				<li>Wall</li>
+				<li>Rock</li>
+			</linkFlags>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Ship/ShipBeamModular_north</uiIconPath>
+		<statBases>
+			<WorkToBuild>100</WorkToBuild>
+			<MaxHitPoints>10000</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<description>The outer structural elements of a ship's hull. Includes conduits for power, life-support gases, and coolant.</description>
+		<designationCategory>Ship</designationCategory>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<comps>
+			<li Class="CompProperties_SoShipPart">
+				<isHull>true</isHull>
+				<hermetic>true</hermetic>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTransmitter</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_RoofMe"/>
+			<li Class="CompProperties_ShipHeat">
+				<compClass>CompShipHeat</compClass>
+			</li>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<building>
+			<shipPart>true</shipPart>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+			<paintable>true</paintable>
+		</building>
+		<costList>
+			<Steel>5</Steel>			
+		</costList>
+		<researchPrerequisites>
+			<li>ShipBasics</li>
+		</researchPrerequisites>
+		<designationHotKey>Misc1</designationHotKey>
+	</ThingDef>
+
+	<!-- ShipAirlock -->
+	<ThingDef ParentName="BuildingBase" MayRequire="kentington.saveourship2">
+		<defName>InvincibleFortress_ShipAirlock</defName>
+		<label>fortress ship airlock</label>
+		<designatorDropdown>Ship_Airlocks</designatorDropdown>
+		<description>Allows access to a ship or divides rooms inside it. Low-energy plasma barriers prevent gases from escaping.</description>
+		<category>Building</category>
+		<thingClass>Building_ShipAirlock</thingClass>
+		<designationCategory>Ship</designationCategory>
+		<altitudeLayer>DoorMoveable</altitudeLayer>
+		<fillPercent>1</fillPercent>
+		<useHitPoints>false</useHitPoints>
+		<graphicData>
+			<texPath>Things/Building/Ship/Airlock_Mover</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<enabled>false</enabled>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Door/Autodoor_MenuIcon</uiIconPath>
+		<costList>
+			<Steel>10</Steel>
+		</costList>
+		<comps>
+			<li Class="CompProperties_SoShipPart">
+				<isHull>true</isHull>
+				<hermetic>true</hermetic>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>50</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_RoofMe"/>
+			<li Class="CompProperties_ShipHeat">
+				<compClass>CompShipHeat</compClass>
+			</li>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+			<li Class="CompProperties_Unfold">
+				<extendRate>0.005</extendRate>
+				<retractRate>0.005</retractRate>
+				<retractTime>240</retractTime>
+				<extendDirection>(0,0,-1)</extendDirection>
+				<startOffset>0.5</startOffset>
+				<length>3.0</length>
+				<width>3.0</width>
+				<graphicPath>Things/Building/Ship/DockTube</graphicPath>
+				<graphicPathAlt>Things/Building/Ship/DockTubeV</graphicPathAlt>
+			</li>
+		</comps>
+		<designationHotKey>Misc2</designationHotKey>
+		<researchPrerequisites>
+			<li>ShipBasics</li>
+		</researchPrerequisites>
+		<statBases>
+			<WorkToBuild>1200</WorkToBuild>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Flammability>0.0</Flammability>
+		</statBases>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<holdsRoof>true</holdsRoof>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<blockLight>true</blockLight>
+		<drawerType>RealtimeOnly</drawerType>
+		<building>
+			<shipPart>true</shipPart>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+			<soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+			<soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+			<soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+			<soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Door/Door_Blueprint</texPath>
+			</blueprintGraphicData>
+			<blueprintClass>Blueprint_Door</blueprintClass>
+			<roamerCanOpen>false</roamerCanOpen>
+			<paintable>true</paintable>
+		</building>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	</ThingDef>
 </Defs>
