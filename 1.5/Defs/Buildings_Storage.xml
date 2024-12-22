@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <!--========================= Fortress Shelf =============================-->
+    <ThingDef Name="InvincibleFortress_ShelfBase" ParentName="ShelfBase" Abstract="True">
+        <useHitPoints>false</useHitPoints>
+        <passability>Standable</passability>
+        <pathCost>0</pathCost>
+        <stuffCategories Inherit="False">
+            <li>Stony</li>
+        </stuffCategories>
+        <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <Mass>4</Mass>
+            <WorkToBuild>100</WorkToBuild>
+        </statBases>
+        <building>
+            <maxItemsInCell>8</maxItemsInCell>
+            <fixedStorageSettings>
+                <filter>
+                    <disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech" Inherit="False" />
+                </filter>
+            </fixedStorageSettings>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="InvincibleFortress_ShelfBase">
+        <defName>InvincibleFortress_Shelf</defName>
+        <label>fortress shelf</label>
+        <description>fortress shelf</description>
+        <graphicData>
+            <texPath>Things/Building/Furniture/Shelf</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,2)</drawSize>
+        </graphicData>
+        <costStuffCount>20</costStuffCount>
+        <costList>
+            <Steel>4</Steel>
+        </costList>
+        <statBases>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+        </statBases>
+        <size>(2,1)</size>
+        <designationHotKey>Misc12</designationHotKey>
+    </ThingDef>
+
+    <ThingDef ParentName="InvincibleFortress_ShelfBase">
+        <defName>InvincibleFortress_ShelfSmall</defName>
+        <label>fortress small shelf</label>
+        <description>fortress small shelf</description>
+        <graphicData>
+            <texPath>Things/Building/Furniture/ShelfSmall</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+        <statBases>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">2.5</StyleDominance>
+        </statBases>
+        <uiIconScale>0.5</uiIconScale>
+        <costStuffCount>10</costStuffCount>
+        <costList>
+            <Steel>2</Steel>
+        </costList>
+        <size>(1,1)</size>
+    </ThingDef>
+
+</Defs>

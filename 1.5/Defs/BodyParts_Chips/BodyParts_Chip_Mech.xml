@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <ThingDef ParentName="InvincibleFortress_Chip_BodyPartBase">
+        <defName>InvincibleFortress_MechChip</defName>
+        <label>mech chip</label>
+        <description>mech chip</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InvincibleFortress_Install_MechChip</RecipeDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+
+    <RecipeDef ParentName="InvincibleFortress_Chip_InstallBase">
+        <defName>InvincibleFortress_Install_MechChip</defName>
+        <label>installed mech chip</label>
+        <description>install a mech chip</description>
+        <jobString>installing a mech chip</jobString>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_MechChip</ThingDef>
+            <HediffDef>InvincibleFortress_MechChip</HediffDef>
+        </descriptionHyperlinks>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>InvincibleFortress_MechChip</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>InvincibleFortress_MechChip</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <addsHediff>InvincibleFortress_MechChip</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="InvincibleFortress_Chip_RemoveBase">
+        <defName>InvincibleFortress_Remove_MechChip</defName>
+        <label>remove mech chip</label>
+        <description>remove the mech chip</description>
+        <jobString>removing the mech chip</jobString>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_MechChip</ThingDef>
+            <HediffDef>InvincibleFortress_MechChip</HediffDef>
+        </descriptionHyperlinks>
+        <removesHediff>InvincibleFortress_MechChip</removesHediff>
+    </RecipeDef>
+
+    <HediffDef ParentName="InvincibleFortress_Chip_HediffBase">
+        <defName>InvincibleFortress_MechChip</defName>
+        <label>mech chip</label>
+        <labelNoun>mech chip</labelNoun>
+        <description>installed mech chip</description>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_MechChip</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>InvincibleFortress_MechChip</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MechBandwidth>256</MechBandwidth>
+                    <MechControlGroups>24</MechControlGroups>
+                </statOffsets>
+                <statFactors>
+                    <MechFormingSpeed>5.0</MechFormingSpeed>
+                    <MechRepairSpeed>5.0</MechRepairSpeed>
+                    <SubcoreEncodingSpeed>5.0</SubcoreEncodingSpeed>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

@@ -93,8 +93,12 @@ namespace InvincibleFortress
                 }
                 else if (thing.HitPoints == thing.MaxHitPoints && thing is Apparel apparel && apparel.WornByCorpse)
                 {
-                    apparel.Notify_PawnResurrected();
-                    result = true;
+                    Pawn originalPawn = apparel.Wearer;
+                    if (originalPawn != null)
+                    {
+                        apparel.Notify_PawnResurrected(originalPawn);
+                        result = true;
+                    }
                 }
             }
             if (thing is Corpse corpse && corpse.InnerPawn != null && TryRepairPawnHolder(corpse.InnerPawn))

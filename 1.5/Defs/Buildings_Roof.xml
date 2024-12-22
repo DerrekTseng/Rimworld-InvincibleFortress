@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <RoofDef>
+        <defName>InvincibleFortressRoof</defName>
+        <label>fortress roof</label>
+        <isThickRoof>true</isThickRoof>       
+        <soundPunchThrough>PunchThroughRoofMetal</soundPunchThrough>
+    </RoofDef>
+
+    <ThingDef>
+        <defName>InvincibleFortress_RoofThing</defName>
+        <label>fortress roof</label>
+        <description>fortress roof</description>
+        <thingClass>Building</thingClass>
+        <category>Building</category>
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+        <statBases>
+            <WorkToBuild>100</WorkToBuild>
+        </statBases>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>InvincibleFortress/Roof</texPath>
+        </graphicData>
+        <uiIconPath>UI/Designators/BuildRoofArea</uiIconPath>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <altitudeLayer>BuildingOnTop</altitudeLayer>
+        <passability>Standable</passability>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>0</fillPercent>
+        <coversFloor>false</coversFloor>
+        <placingDraggableDimensions>2</placingDraggableDimensions>
+        <tickerType>Normal</tickerType>
+        <rotatable>false</rotatable>
+        <neverMultiSelect>true</neverMultiSelect>
+        <designationCategory>Zone</designationCategory>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <staticSunShadowHeight>1.0</staticSunShadowHeight>
+        <blockLight>false</blockLight>
+        <canOverlapZones>true</canOverlapZones>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <clearBuildingArea>false</clearBuildingArea>
+        <building>
+            <isInert>true</isInert>
+            <canPlaceOverWall>true</canPlaceOverWall>
+            <isEdifice>false</isEdifice>
+            <blueprintGraphicData>
+                <texPath>Things/Special/TerrainBlueprint</texPath>
+            </blueprintGraphicData>
+        </building>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+            <li Class="CompProperties">
+                <compClass>InvincibleFortress.CompFortressRoof</compClass>
+            </li>
+        </comps>
+        <placeWorkers>
+            <li>InvincibleFortress.PlaceWorker_FortressRoof</li>
+        </placeWorkers>
+    </ThingDef>
+
+</Defs>

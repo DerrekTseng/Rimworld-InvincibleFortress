@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <ThingDef ParentName="InvincibleFortress_Chip_BodyPartBase">
+        <defName>InvincibleFortress_CarryerChip</defName>
+        <label>carryer chip</label>
+        <description>carryer chip</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InvincibleFortress_Install_CarryerChip</RecipeDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+
+    <RecipeDef ParentName="InvincibleFortress_Chip_InstallBase">
+        <defName>InvincibleFortress_Install_CarryerChip</defName>
+        <label>installed carryer chip</label>
+        <description>install a carryer chip</description>
+        <jobString>installing a carryer chip</jobString>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_CarryerChip</ThingDef>
+            <HediffDef>InvincibleFortress_CarryerChip</HediffDef>
+        </descriptionHyperlinks>        
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>InvincibleFortress_CarryerChip</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>InvincibleFortress_CarryerChip</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <addsHediff>InvincibleFortress_CarryerChip</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="InvincibleFortress_Chip_RemoveBase">
+        <defName>InvincibleFortress_Remove_CarryerChip</defName>
+        <label>remove carryer chip</label>
+        <description>remove the carryer chip</description>
+        <jobString>removing the carryer chip</jobString>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_CarryerChip</ThingDef>
+            <HediffDef>InvincibleFortress_CarryerChip</HediffDef>
+        </descriptionHyperlinks>        
+        <removesHediff>InvincibleFortress_CarryerChip</removesHediff>
+    </RecipeDef>
+
+    <HediffDef ParentName="InvincibleFortress_Chip_HediffBase">
+        <defName>InvincibleFortress_CarryerChip</defName>
+        <label>carryer chip</label>
+        <labelNoun>carryer chip</labelNoun>
+        <description>installed carryer chip</description>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_CarryerChip</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>InvincibleFortress_CarryerChip</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <CarryingCapacity>200</CarryingCapacity>
+                </statOffsets>
+                <statFactors>
+                    <CarryingCapacity>500</CarryingCapacity>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

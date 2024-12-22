@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <ThingDef ParentName="InvincibleFortress_Chip_BodyPartBase">
+        <defName>InvincibleFortress_AttackerChip</defName>
+        <label>attacker chip</label>
+        <description>attacker chip</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InvincibleFortress_Install_AttackerChip</RecipeDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+
+    <RecipeDef ParentName="InvincibleFortress_Chip_InstallBase">
+        <defName>InvincibleFortress_Install_AttackerChip</defName>
+        <label>installed attacker chip</label>
+        <description>install a attacker chip</description>
+        <jobString>installing a attacker chip</jobString>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_AttackerChip</ThingDef>
+            <HediffDef>InvincibleFortress_AttackerChip</HediffDef>
+        </descriptionHyperlinks>        
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>InvincibleFortress_AttackerChip</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>InvincibleFortress_AttackerChip</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <addsHediff>InvincibleFortress_AttackerChip</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="InvincibleFortress_Chip_RemoveBase">
+        <defName>InvincibleFortress_Remove_AttackerChip</defName>
+        <label>remove attacker chip</label>
+        <description>remove the attacker chip</description>
+        <jobString>removing the attacker chip</jobString>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_AttackerChip</ThingDef>
+            <HediffDef>InvincibleFortress_AttackerChip</HediffDef>
+        </descriptionHyperlinks>        
+        <removesHediff>InvincibleFortress_AttackerChip</removesHediff>
+    </RecipeDef>
+
+    <HediffDef ParentName="InvincibleFortress_Chip_HediffBase">
+        <defName>InvincibleFortress_AttackerChip</defName>
+        <label>attacker chip</label>
+        <labelNoun>attacker chip</labelNoun>
+        <description>installed attacker chip</description>
+        <descriptionHyperlinks>
+            <ThingDef>InvincibleFortress_AttackerChip</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>InvincibleFortress_AttackerChip</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MeleeArmorPenetration>10</MeleeArmorPenetration>
+                    <MeleeHitChance>10</MeleeHitChance>
+                    <MeleeHitChanceOutdoorsDarkOffset>10</MeleeHitChanceOutdoorsDarkOffset>
+                    <MeleeHitChanceOutdoorsLitOffset>10</MeleeHitChanceOutdoorsLitOffset>
+                    <MeleeHitChanceIndoorsDarkOffset>10</MeleeHitChanceIndoorsDarkOffset>
+                    <MeleeHitChanceIndoorsLitOffset>10</MeleeHitChanceIndoorsLitOffset>
+                    <MeleeDodgeChance>100</MeleeDodgeChance>
+                    <MeleeDodgeChanceOutdoorsDarkOffset>10</MeleeDodgeChanceOutdoorsDarkOffset>
+                    <MeleeDodgeChanceOutdoorsLitOffset>10</MeleeDodgeChanceOutdoorsLitOffset>
+                    <MeleeDodgeChanceIndoorsDarkOffset>10</MeleeDodgeChanceIndoorsDarkOffset>
+                    <MeleeDodgeChanceIndoorsLitOffset>10</MeleeDodgeChanceIndoorsLitOffset>
+                    <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+                    <ShootingAccuracyFactor_Touch>5</ShootingAccuracyFactor_Touch>
+                    <ShootingAccuracyFactor_Short>5</ShootingAccuracyFactor_Short>
+                    <ShootingAccuracyFactor_Medium>5</ShootingAccuracyFactor_Medium>
+                    <ShootingAccuracyFactor_Long>5</ShootingAccuracyFactor_Long>
+                    <ShootingAccuracyOutdoorsDarkOffset>5</ShootingAccuracyOutdoorsDarkOffset>
+                    <ShootingAccuracyOutdoorsLitOffset>5</ShootingAccuracyOutdoorsLitOffset>
+                    <ShootingAccuracyIndoorsDarkOffset>5</ShootingAccuracyIndoorsDarkOffset>
+                    <ShootingAccuracyIndoorsLitOffset>5</ShootingAccuracyIndoorsLitOffset>
+                </statOffsets>
+                <statFactors>
+                    <MeleeDamageFactor>20</MeleeDamageFactor>
+                    <MeleeDoorDamageFactor>20</MeleeDoorDamageFactor>
+                    <AimingDelayFactor>0</AimingDelayFactor>
+                    <RangedCooldownFactor>0</RangedCooldownFactor>
+                    <MortarMissRadiusFactor>0</MortarMissRadiusFactor>
+                    <PsychicEntropyGain>0</PsychicEntropyGain>
+                    <StaggerDurationFactor>0</StaggerDurationFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

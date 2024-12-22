@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!--========================== WorkGiver ==========================-->
+    <WorkGiverDef>
+        <defName>InvincibleFortress_WorkGiver_ResourceSpot</defName>
+        <label>make things at fortress resource spot</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>100</priorityInType>
+        <fixedBillGiverDefs>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </fixedBillGiverDefs>
+        <verb>resource</verb>
+        <gerund>resourcing at</gerund>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+
+    <!--========================== Building ==========================-->
+    <ThingDef ParentName="BuildingBase">
+        <defName>InvincibleFortress_ResourceSpot</defName>
+        <label>fortress resource spot</label>
+        <description>fortress resource spot</description>
+        <thingClass>Building_WorkTable</thingClass>
+        <graphicData>
+            <texPath>InvincibleFortress/ResourceSpot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <altitudeLayer>FloorEmplacement</altitudeLayer>
+        <statBases>
+            <WorkToBuild>0</WorkToBuild>
+        </statBases>
+        <scatterableOnMapGen>false</scatterableOnMapGen>
+        <useHitPoints>false</useHitPoints>
+        <size>(1,1)</size>
+        <designationCategory>Production</designationCategory>
+        <uiOrder>2000</uiOrder>
+        <passability>Standable</passability>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+            <sowTag>SupportPlantsOnly</sowTag>
+            <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+            <ai_chillDestination>false</ai_chillDestination>
+            <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+            <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+            <buildingTags>
+                <li>Production</li>
+            </buildingTags>
+        </building>
+        <comps>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>ToolCabinet</li>
+                </linkableFacilities>
+            </li>
+            <li>
+                <compClass>CompReportWorkSpeed</compClass>
+            </li>
+        </comps>
+        <designationHotKey>Misc1</designationHotKey>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+            <li>PlaceWorker_ReportWorkSpeedPenalties</li>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+    </ThingDef>
+
+    <!--========================== Recipes ==========================-->
+
+    <!-- Resources -->
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_WoodLog</defName>
+        <label>wood</label>
+        <description>wood</description>
+        <jobString>Making wood</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <WoodLog>75</WoodLog>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_Steel</defName>
+        <label>steel</label>
+        <description>steel</description>
+        <jobString>Making steel</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <Steel>75</Steel>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_Gold</defName>
+        <label>gold</label>
+        <description>gold</description>
+        <jobString>Making gold</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <Gold>500</Gold>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_Plasteel</defName>
+        <label>plasteel</label>
+        <description>plasteel</description>
+        <jobString>Making plasteel</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <Plasteel>75</Plasteel>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_Silver</defName>
+        <label>silver</label>
+        <description>silver</description>
+        <jobString>Making silver</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <Silver>500</Silver>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_Jade</defName>
+        <label>jade</label>
+        <description>jade</description>
+        <jobString>Making jade</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <Jade>75</Jade>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_Uranium</defName>
+        <label>uranium</label>
+        <description>uranium</description>
+        <jobString>Making uranium</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <Uranium>75</Uranium>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!-- Components -->
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_ComponentSpacer</defName>
+        <label>component spacer</label>
+        <description>component spacer</description>
+        <jobString>Making component spacer</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <ComponentSpacer>50</ComponentSpacer>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_ComponentIndustrial</defName>
+        <label>component industrial</label>
+        <description>component industrial</description>
+        <jobString>Making component industrial</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <ComponentIndustrial>50</ComponentIndustrial>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!-- Meal -->
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_MealSurvivalPack</defName>
+        <label>packaged survival meal</label>
+        <description>packaged survival meal</description>
+        <jobString>Making packaged survival meal</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <MealSurvivalPack>75</MealSurvivalPack>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!-- Glitterworld medicine -->
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_MedicineUltratech</defName>
+        <label>glitterworld medicine</label>
+        <description>glitterworld medicine</description>
+        <jobString>Making glitterworld medicine</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <MedicineUltratech>75</MedicineUltratech>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!-- Blocks -->
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_BlocksGranite</defName>
+        <label>granite blocks</label>
+        <description>granite blocks</description>
+        <jobString>Making granite blocks</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <BlocksGranite>75</BlocksGranite>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_BlocksLimestone</defName>
+        <label>limestone blocks</label>
+        <description>limestone blocks</description>
+        <jobString>Making limestone blocks</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <BlocksLimestone>75</BlocksLimestone>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_BlocksMarble</defName>
+        <label>marble blocks</label>
+        <description>marble blocks</description>
+        <jobString>Making marble blocks</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <BlocksMarble>75</BlocksMarble>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_BlocksSandstone</defName>
+        <label>sandstone blocks</label>
+        <description>sandstone blocks</description>
+        <jobString>Making sandstone blocks</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <BlocksSandstone>75</BlocksSandstone>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_BlocksSlate</defName>
+        <label>slate blocks</label>
+        <description>slate blocks</description>
+        <jobString>Making slate blocks</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <BlocksSlate>75</BlocksSlate>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!-- Cores -->
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_AIPersonaCore</defName>
+        <label>persona core</label>
+        <description>persona core</description>
+        <jobString>Making persona core</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <AIPersonaCore>1</AIPersonaCore>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_TechprofSubpersonaCore</defName>
+        <label>Techprof subpersona core</label>
+        <description>Techprof subpersona core</description>
+        <jobString>Making Techprof subpersona core</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <TechprofSubpersonaCore>1</TechprofSubpersonaCore>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!-- Antigrain warhead -->
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_Shell_AntigrainWarhead</defName>
+        <label>antigrain warhead</label>
+        <description>antigrain warhead</description>
+        <jobString>Making antigrain warhead</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <Shell_AntigrainWarhead>25</Shell_AntigrainWarhead>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!-- Luciferium -->
+    <RecipeDef>
+        <defName>InvincibleFortress_Recipe_Resource_Luciferium</defName>
+        <label>luciferium</label>
+        <description>luciferium</description>
+        <jobString>Making luciferium</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>200</workAmount>
+        <products>
+            <Luciferium>150</Luciferium>
+        </products>
+        <recipeUsers>
+            <li>InvincibleFortress_ResourceSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+</Defs>

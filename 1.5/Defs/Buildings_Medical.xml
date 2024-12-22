@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThingDef ParentName="BedWithQualityBase">
+        <defName>InvincibleFortress_HospitalBed</defName>
+        <label>fortress hospital bed</label>
+        <description>fortress hospital bed</description>
+        <useHitPoints>false</useHitPoints>
+        <graphicData>
+            <texPath>Things/Building/Furniture/Bed/HospitalBed</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+        <castEdgeShadows>True</castEdgeShadows>
+        <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
+            <WorkToBuild>2800</WorkToBuild>
+            <Mass>0</Mass>
+            <Flammability>0</Flammability>
+            <BedRestEffectiveness>5</BedRestEffectiveness>
+            <Comfort>2</Comfort>
+            <ImmunityGainSpeedFactor>2.0</ImmunityGainSpeedFactor>
+            <MedicalTendQualityOffset>2.0</MedicalTendQualityOffset>
+            <SurgerySuccessChanceFactor>2.0</SurgerySuccessChanceFactor>
+            <BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">100</BirthRitualQualityOffset>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>VitalsMonitor</li>
+                    <li>EndTable</li>
+                    <li>Dresser</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+                    <li>InvincibleFortress_VitalsMonitor</li>
+                </linkableFacilities>
+            </li>
+        </comps>
+        <size>(1,2)</size>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costStuffCount>40</costStuffCount>
+        <costList>
+            <Steel>40</Steel>
+        </costList>
+        <building>
+            <bed_showSleeperBody>False</bed_showSleeperBody>
+            <bed_healPerDay>2400</bed_healPerDay>
+            <bed_defaultMedical>true</bed_defaultMedical>
+            <buildingSizeCategory>Small</buildingSizeCategory>
+            <paintable>true</paintable>
+        </building>
+        <fillPercent>0.4</fillPercent>
+        <pathCost>0</pathCost>
+        <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+        <staticSunShadowHeight>0.17</staticSunShadowHeight>
+        <designationHotKey>Misc5</designationHotKey>
+        <uiIconScale>0.90</uiIconScale>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>InvincibleFortress_VitalsMonitor</defName>
+        <label>fortress vitals monitor</label>
+        <description>fortress vitals monitor</description>
+        <useHitPoints>false</useHitPoints>
+        <graphicData>
+            <texPath>Things/Building/Misc/VitalsMonitor</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.2</fillPercent>
+        <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
+            <WorkToBuild>100</WorkToBuild>
+            <Mass>0</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <costList>
+            <Steel>50</Steel>
+        </costList>
+        <building>
+            <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+        </building>
+        <designationCategory>Misc</designationCategory>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Facility">
+                <statOffsets>
+                    <MedicalTendQualityOffset>10</MedicalTendQualityOffset>
+                    <ImmunityGainSpeedFactor>10</ImmunityGainSpeedFactor>
+                    <SurgerySuccessChanceFactor>10</SurgerySuccessChanceFactor>
+                    <BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">10</BirthRitualQualityOffset>
+                </statOffsets>
+                <maxSimultaneous>1</maxSimultaneous>
+                <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+            </li>
+        </comps>
+        <designationHotKey>Misc5</designationHotKey>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+        </placeWorkers>
+        <uiIconScale>0.85</uiIconScale>
+    </ThingDef>
+
+</Defs>

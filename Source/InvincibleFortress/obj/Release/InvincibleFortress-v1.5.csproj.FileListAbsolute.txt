@@ -1,0 +1,6 @@
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Rimworld-InvincibleFortress\1.4\Assemblies\InvincibleFortress.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Rimworld-InvincibleFortress\1.4\Assemblies\InvincibleFortress.pdb
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Rimworld-InvincibleFortress\Source\InvincibleFortress\obj\Release\InvincibleFortress-v1.5.csproj.AssemblyReference.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Rimworld-InvincibleFortress\Source\InvincibleFortress\obj\Release\InvincibleFortress-v1.5.csproj.CoreCompileInputs.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Rimworld-InvincibleFortress\Source\InvincibleFortress\obj\Release\InvincibleFortress.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Rimworld-InvincibleFortress\Source\InvincibleFortress\obj\Release\InvincibleFortress.pdb

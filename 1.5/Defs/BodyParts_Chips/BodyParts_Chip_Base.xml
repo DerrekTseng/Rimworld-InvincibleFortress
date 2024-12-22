@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <ThingDef Name="InvincibleFortress_Chip_BodyPartBase" ParentName="BodyPartBase" Abstract="True">
+        <useHitPoints>false</useHitPoints>
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <color>(255,215,0)</color>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.80</drawSize>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1000000</MaxHitPoints>
+            <MarketValue>1000000</MarketValue>
+            <Flammability>0</Flammability>
+            <Mass>0</Mass>
+            <Beauty>0</Beauty>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <thingSetMakerTags>
+            <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+        <thingCategories>
+            <li>InvincibleFortress_BodyParts</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+        </comps>
+    </ThingDef>
+
+    <RecipeDef Name="InvincibleFortress_Chip_InstallBase" ParentName="SurgeryInstallImplantBase" Abstract="True">
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+    </RecipeDef>
+
+    <RecipeDef Name="InvincibleFortress_Chip_RemoveBase" ParentName="SurgeryRemoveImplantBase" Abstract="True"></RecipeDef>
+
+    <HediffDef Name="InvincibleFortress_Chip_HediffBase" ParentName="ImplantHediffBase" Abstract="True">
+        <addedPartProps>
+            <solid>false</solid>
+            <partEfficiency>2</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+
+</Defs>

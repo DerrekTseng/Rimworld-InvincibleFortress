@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!--========================== WorkGiver ==========================-->
+    <WorkGiverDef>
+        <defName>InvincibleFortress_WorkGiver_CrafteSpot</defName>
+        <label>make things at fortress crafte spot</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>100</priorityInType>
+        <fixedBillGiverDefs>
+            <li>InvincibleFortress_CrafteSpot</li>
+        </fixedBillGiverDefs>
+        <verb>craft</verb>
+        <gerund>crafting at</gerund>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+
+    <!--========================== Building ==========================-->
+    <ThingDef ParentName="BuildingBase">
+        <defName>InvincibleFortress_CrafteSpot</defName>
+        <label>fortress crafte spot</label>
+        <description>fortress crafte spot</description>
+        <thingClass>Building_WorkTable</thingClass>
+        <graphicData>
+            <texPath>InvincibleFortress/CrafteSpot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <altitudeLayer>FloorEmplacement</altitudeLayer>
+        <statBases>
+            <WorkToBuild>0</WorkToBuild>
+        </statBases>
+        <scatterableOnMapGen>false</scatterableOnMapGen>
+        <useHitPoints>false</useHitPoints>
+        <size>(1,1)</size>
+        <designationCategory>Production</designationCategory>
+        <uiOrder>2000</uiOrder>
+        <passability>Standable</passability>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <recipes>
+            <li>ExtractMetalFromSlag</li>
+            <li>SmashCorpseMechanoid</li>
+            <li>CremateCorpse</li>
+            <li>ButcherCorpseFlesh</li>
+            <li>Make_StoneBlocksAny</li>
+        </recipes>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+            <sowTag>SupportPlantsOnly</sowTag>
+            <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+            <ai_chillDestination>false</ai_chillDestination>
+            <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+            <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+            <buildingTags>
+                <li>Production</li>
+            </buildingTags>
+        </building>
+        <comps>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>ToolCabinet</li>
+                </linkableFacilities>
+            </li>
+            <li>
+                <compClass>CompReportWorkSpeed</compClass>
+            </li>
+        </comps>
+        <designationHotKey>Misc1</designationHotKey>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+            <li>PlaceWorker_ReportWorkSpeedPenalties</li>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+    </ThingDef>
+
+    <!--========================== Recipes ==========================-->
+
+    <!-- Recycle -->
+    <RecipeDef>
+        <defName>InvincibleFortress_Recycle_Recipe</defName>
+        <label>recycle</label>
+        <description>recycle.</description>
+        <jobString>Recycling item.</jobString>
+        <workAmount>100</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <workTableEfficiencyStat>Flammability</workTableEfficiencyStat>
+        <specialProducts>
+            <li>Smelted</li>
+        </specialProducts>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Apparel</li>
+                        <li>MortarShells</li>
+                        <li>Unfinished</li>
+                        <li>BodyPartsProsthetic</li>
+                        <li>BodyPartsBionic</li>
+                        <li>BodyPartsUltra</li>
+                        <li>Weapons</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Apparel</li>
+                <li>MortarShells</li>
+                <li>Unfinished</li>
+                <li>BodyPartsProsthetic</li>
+                <li>BodyPartsBionic</li>
+                <li>BodyPartsUltra</li>
+                <li>Weapons</li>
+            </categories>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>InvincibleFortress_CrafteSpot</li>
+        </recipeUsers>
+    </RecipeDef>
+
+</Defs>
